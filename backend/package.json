@@ -1,0 +1,42 @@
+{
+  "name": "controle-carteira",
+  "version": "1.0.0",
+  "description": "Backend para a plataforma de controle de carteira",
+  "main": "index.js",
+  "dependencies": {
+    "async": "^1.5.0",
+    "axios": "^0.19.0",
+    "bcrypt-nodejs": "^0.0.3",
+    "body-parser": "^1.14.1",
+    "chance": "^1.1.4",
+    "connect-multiparty": "^2.0.0",
+    "cors": "^2.7.1",
+    "express": "^4.13.3",
+    "gm": "^1.23.1",
+    "googleapis": "^56.0.0",
+    "jsonwebtoken": "^5.4.0",
+    "lodash": "^4.17.11",
+    "mime-types": "^2.1.24",
+    "moment": "^2.24.0",
+    "mongoose": "^5.6.3",
+    "mongoose-auto-increment": "^5.0.1",
+    "mongoose-deep-populate": "^3.1.1",
+    "multer": "^1.4.1",
+    "pdfmake": "^0.1.57",
+    "q": "^1.4.1",
+    "readline": "^1.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.2",
+    "prettier": "^1.18.2"
+  },
+  "author": "Jordan Gonçalves",
+  "license": "MIT"
+}

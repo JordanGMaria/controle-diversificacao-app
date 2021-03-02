@@ -1,0 +1,56 @@
+
+@token = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InJvb3RAb3JnYW5pemUuY29tLmJyIiwiX2lkIjoiNWUwZDE4NjAxYTlmZmU1OGE5YzVlNTgzIiwibm9tZSI6IkFkbWluaXN0cmFkb3IiLCJyb290Ijp0cnVlLCJpYXQiOjE1Nzc5MTY1MzgsImV4cCI6MTYwOTQ1MjUzOH0.tEJfwXxJE3415uas6wa1AuaOuzNERsGemUSPJ2SObvY
+@url = http://localhost:4541/api
+
+###
+# Busca todos os usuário paginados de 25 em 25
+## caso queira filtrar digita {{email}} dentro das aspas abaixo
+@email = teste@teste.com.br
+POST {{url}}/v1/users/list
+Content-Type: application/json
+authorization: {{token}}
+
+{
+}
+
+###
+# Busca detalhes de um usuario
+@id = 5d2e260f9338c00b075b2c98
+GET {{url}}/v1/users/{{id}}
+Content-Type: application/json
+authorization: {{token}}
+
+###
+# Cria um usuário
+POST {{url}}/v1/users
+Content-Type: application/json
+authorization: {{token}}
+
+{
+  "email": "teste1343@gmail.com",
+  "password": "mudar123",
+  "nome": "Baby New"
+}
+
+###
+# Edita um usuário
+# somente root consegue alterar a flag verificado
+@idEdit = 5d2e2ab2ebe81612c09a34da
+PUT {{url}}/v1/users
+Content-Type: application/json
+authorization: {{token}}
+
+{
+  "_id": "{{idEdit}}",
+  "email": "teste12312@gmail.com",
+  "password": "mudar123",
+  "nome": "Editado",
+  "verificado": true
+}
+
+###
+# Desativa um usuário
+@idDelete = 5d2e2ab2ebe81612c09a34da
+DELETE {{url}}/v1/users/{{idDelete}}
+Content-Type: application/json
+authorization: {{token}}
